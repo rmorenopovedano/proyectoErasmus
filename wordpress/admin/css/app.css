@@ -1,0 +1,102 @@
+.margintop30px{
+    margin-top: 30px;
+}
+.margin30px{
+    margin: 30px;
+}
+.padding40px{
+    padding: 40px;
+}
+.padding10px{
+    padding:10px;
+}
+textarea{
+    resize: none;
+}
+.centrar{
+    text-align: center;
+}
+.border{
+    border:1px solid #dddddd;
+}
+.fondo_blanco{
+    background: white;
+}
+.fondo_azul{
+    background: #004397;
+}
+.fondo_footer{
+    background: #1F2021;
+}
+.letra_azul{
+    color: #004397;
+}
+.letra_gris{
+    color: #aaaaaa;
+}
+.letra_contacto{
+    color: #B1B6B6;
+}
+.letra_blanca{
+    color: white;
+}
+.letra_footer{
+    font-size: 12px;
+    color: #777;
+}
+.letra_gris:hover{
+    color: #004397;
+    border-top: 2px solid #004397;
+}
+body{
+    background: #F2F2F2;
+}
+#formulario_oculto{
+    display:none;
+}
+#aviso{
+    display: none;
+    background: #FFE7A7;
+    border: 1px solid orange;
+    text-align: center;
+}
+.exito{
+    color:#004397;
+    border: 2px solid #dddddd;
+    background: #D9D8FF;
+    padding: 20px;
+    font-size: 22px;
+    box-shadow: 2px 2px 10px #004397;
+}
+a.boton{
+    text-decoration: none;
+    padding: 5px;
+    color: #2199E8;
+    text-shadow:black;
+    background: #FFF2E4;
+    border: 1px solid #004397;
+    border-radius: 4px 4px;
+}
+a.boton:hover{
+    background: #FFE5CB;
+}
+fieldset{
+    padding: 0px 15px 0 15px;
+    background-color: #D9D3FF;
+    margin-top: 10px;
+}
+legend{
+    color:#004397;
+    background: white;
+    padding: 0 10px;
+}
+a#salir{
+    color:red;
+}
+div.table-scroll table {
+    width: 100%;
+}
+.baremacion{
+    color: orangered;
+    font-size: 0.8em;
+}

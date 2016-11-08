@@ -1,0 +1,301 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ColumnPost1.2.4\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/column-posts\n"
+"POT-Creation-Date: 2013-12-08 22:45:45+00:00\n"
+"PO-Revision-Date: 2014-01-31 15:25-0800\n"
+"Last-Translator: IngeniusC <ingeniusc@gmail.com>\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: column-posts.php:333
+msgid "Article %s published at %s"
+msgstr "Artículo %s publicado a %s"
+
+#: column-posts.php:333
+msgid "F j, Y g:i a"
+msgstr "F j, Y g:i a"
+
+#: includes/admin.php:42
+msgid "Settings"
+msgstr "Configuraciones"
+
+#: includes/admin.php:90
+msgid "Usage"
+msgstr "Uso"
+
+#: includes/admin.php:93
+msgid "Columns"
+msgstr "Columnas"
+
+#: includes/admin.php:95
+msgid "Classified by"
+msgstr "Clasificado por"
+
+#: includes/admin.php:97
+msgid "Number of columns"
+msgstr "Número de columnas"
+
+#: includes/admin.php:101
+msgid "Categories"
+msgstr "Categorías"
+
+#: includes/admin.php:103
+msgid "Category title"
+msgstr "Titúlo de la categoría"
+
+#: includes/admin.php:105 includes/admin.php:251
+msgid "Include category"
+msgstr "Incluir categoría"
+
+#: includes/admin.php:107
+msgid "Exclude category"
+msgstr "Excluir categoría"
+
+#: includes/admin.php:109
+msgid "Order categories by"
+msgstr "Categorías ordernadas por"
+
+#: includes/admin.php:113
+msgid "Posts"
+msgstr "Notas"
+
+#: includes/admin.php:115
+msgid "Number of posts"
+msgstr "Número de notas"
+
+#: includes/admin.php:117
+msgid "Headline length"
+msgstr "Longitud del encabezado"
+
+#: includes/admin.php:119
+msgid "Hide sticky posts"
+msgstr "Ocultar notas pegables"
+
+#: includes/admin.php:121
+msgid "Show excerpt"
+msgstr "Mostrar extracto"
+
+#: includes/admin.php:123
+msgid "Show thumbnail"
+msgstr "Mostrar miniatura"
+
+#: includes/admin.php:125
+msgid "Thumbnail size"
+msgstr "Tamaño de la miniatura"
+
+#: includes/admin.php:127
+msgid "Show only posts with thumbnails"
+msgstr "Mostrar solo notas con miniaturas"
+
+#: includes/admin.php:129
+msgid "Order post by"
+msgstr "Ordernar notas por"
+
+#: includes/admin.php:133
+msgid "Styling"
+msgstr "Estilo"
+
+#: includes/admin.php:135
+msgid "Category font color"
+msgstr "Color de la fuente de la categoría"
+
+#: includes/admin.php:137
+msgid "Headline font color"
+msgstr "Color de la fuente del encabezado"
+
+#: includes/admin.php:139
+msgid "Headline font size"
+msgstr "Tamaño de la fuente del encabezado"
+
+#: includes/admin.php:141
+msgid "Font family"
+msgstr "Familia de la fuente"
+
+#: includes/admin.php:143
+msgid "Excerpt font color"
+msgstr "Color de la fuente del extracto"
+
+#: includes/admin.php:145
+msgid "Excerpt font size"
+msgstr "Tamaño de la fuente del extracto"
+
+#: includes/admin.php:147
+msgid "Thumbnail border"
+msgstr "Border de la miniatura"
+
+#: includes/admin.php:149
+msgid "List style"
+msgstr "Estilo de la lista"
+
+#: includes/admin.php:156 includes/admin.php:178
+msgid "Column Posts Options"
+msgstr "Opciones de las notas en columnas"
+
+#. Plugin Name of the plugin/theme
+#: includes/admin.php:156 includes/widget.php:24
+msgid "Column Posts"
+msgstr "Notas en columnas"
+
+#: includes/admin.php:187
+msgid "Save Changes"
+msgstr "Grabar los cambios"
+
+#: includes/admin.php:198
+msgid ""
+"To display the posts in columns, use the following code in your template "
+"files: <code>&lt;?php do_action('columnpost'); ?&gt;</code>.<br/>You can use "
+"the shortcode <b>[columnpost]</b> if you want to display the output of this "
+"plugin in your page or post content.<br/>Also, the column posts can be "
+"displayed in the sidebar by using the Column Posts widget."
+msgstr ""
+"Para mostrar las notas en columnas, utilice el siguiente código en los "
+"archivos de plantilla: <code>&lt;?php do_action('columnpost'); ?&gt;</code>."
+"<br/>Usted puede utilizar el código corto <b>[columnpost]</b> si desea "
+"mostrar la salida de este plugin en el contenido de su página o nota.<br/"
+">Además, las notas en columna se puede mostrar en la barra lateral "
+"utilizando el widget de notas en columna."
+
+#: includes/admin.php:203
+msgid "The posts are grouped by categories or posts, and displayed in columns."
+msgstr ""
+"Las notas son agrupadas por categorías o notas y son mostradas en las "
+"columnas."
+
+#: includes/admin.php:209
+msgid "Category"
+msgstr "Categoría"
+
+#: includes/admin.php:210
+msgid "Post"
+msgstr "Nota"
+
+#: includes/admin.php:216
+msgid "One"
+msgstr "Uno"
+
+#: includes/admin.php:217
+msgid "Two"
+msgstr "Dos"
+
+#: includes/admin.php:218
+msgid "Three"
+msgstr "Tres"
+
+#: includes/admin.php:223
+msgid ""
+"This section allow you to redefine the category title, include or exclude "
+"categories and change their ordering."
+msgstr ""
+"Esta sección le permiten redefinir el título de la categoría, incluir o "
+"excluir categorías y cambiar su orden."
+
+#: includes/admin.php:229
+msgid "%%title%% is the category name"
+msgstr "%%title%% es el nombre de la categoría"
+
+#: includes/admin.php:236 includes/admin.php:243
+msgid "comma separated category ID's"
+msgstr "categoría de ID separado por comas"
+
+#: includes/admin.php:249
+msgid "Category ID"
+msgstr "ID de la categoría"
+
+#: includes/admin.php:250
+msgid "Category Name"
+msgstr "Nombre de la categoría"
+
+#: includes/admin.php:251
+msgid "Custom, as listed in <em>%s</em>"
+msgstr "Personalizado, como listado en <em>%s</em>"
+
+#: includes/admin.php:256
+msgid ""
+"This section allow you to specify the number of posts to show, adjust the "
+"lenght of the title, hide sticky posts, show excerpts and thumbnails."
+msgstr ""
+"Esta sección le permite especificar el número de notas a mostrar, ajustar la "
+"longitud del título, ocultar notas pegajosos, mostrar extractos y fotos en "
+"miniaturas."
+
+#: includes/admin.php:268
+msgid "leave blank for full post title length, optimal 34 characters"
+msgstr ""
+"dejar en blanco para mostrar todo el título de la nota, 34 caráctes es lo "
+"óptimo"
+
+#: includes/admin.php:293
+msgid "enter size in px for thumbnail width (height proportionally to width)"
+msgstr ""
+"ingresar el tamaño en px para el ancho de la mini imagén (el alto es el "
+"mismo)"
+
+#: includes/admin.php:305
+msgid "Post Date"
+msgstr "Fecha de la nota"
+
+#: includes/admin.php:306
+msgid "Post Title"
+msgstr "Titúlo de la nota"
+
+#: includes/admin.php:311
+msgid ""
+"You can change the styling of the column posts such as font family, font "
+"color. font size, etc ."
+msgstr ""
+"Puede cambiar el estilo de las notas en columna como la familia de la "
+"fuente, color de la fuente, tamaño de la fuente, etc."
+
+#: includes/admin.php:317 includes/admin.php:324
+msgid "(<em>blank assumes the theme color</em>)"
+msgstr ""
+"(<em>se asume el color del tema cuando el dato es dejado en blanco</em>)"
+
+#: includes/admin.php:330 includes/admin.php:349
+msgid "px"
+msgstr "px"
+
+#: includes/admin.php:336
+msgid "Example: verdana, arial, sans-serif. Blank assumes the theme."
+msgstr ""
+"Ejemplo: verdana, arial, sans-serif. Si se deja en blanco, toma el tipo de "
+"letra del tema."
+
+#: includes/admin.php:343
+msgid "(<em>blank assumes the theme color<em>)"
+msgstr ""
+"(<em>se asume el color del tema cuando el dato es dejado en blanco</em>)"
+
+#: includes/widget.php:23
+msgid "Display category or posts in columns"
+msgstr "Mostrar categoría or notas en columnas"
+
+#: includes/widget.php:39
+msgid "To set up options, please go to the <a href=\"%s\">settings</a>"
+msgstr ""
+"Para configurar las opciones, por favor ir a la opción de <a href=\"%s"
+"\">configuraciones</a>"
+
+#. Plugin URI of the plugin/theme
+msgid "http://boroniatechnologies.com/column-posts/"
+msgstr "http://boroniatechnologies.com/column-posts/"
+
+#. Description of the plugin/theme
+msgid "Display the posts in columns organized by posts or categories."
+msgstr "Muestra las notas en columnas organizadas por notas o categorías."
+
+#. Author of the plugin/theme
+msgid "Catherine Lebastard"
+msgstr "Catherine Lebastard"
+
+#. Author URI of the plugin/theme
+msgid "http://boroniatechnologies.com"
+msgstr "http://boroniatechnologies.com"

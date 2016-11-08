@@ -1,0 +1,274 @@
+# Copyright (C) 2013 Column Posts
+# This file is distributed under the same license as the Column Posts package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Column Posts 1.2.4\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/column-posts\n"
+"POT-Creation-Date: 2013-12-08 22:45:45+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: column-posts.php:333
+msgid "Article %s published at %s"
+msgstr ""
+
+#: column-posts.php:333
+msgid "F j, Y g:i a"
+msgstr ""
+
+#: includes/admin.php:42
+msgid "Settings"
+msgstr ""
+
+#: includes/admin.php:90
+msgid "Usage"
+msgstr ""
+
+#: includes/admin.php:93
+msgid "Columns"
+msgstr ""
+
+#: includes/admin.php:95
+msgid "Classified by"
+msgstr ""
+
+#: includes/admin.php:97
+msgid "Number of columns"
+msgstr ""
+
+#: includes/admin.php:101
+msgid "Categories"
+msgstr ""
+
+#: includes/admin.php:103
+msgid "Category title"
+msgstr ""
+
+#: includes/admin.php:105 includes/admin.php:251
+msgid "Include category"
+msgstr ""
+
+#: includes/admin.php:107
+msgid "Exclude category"
+msgstr ""
+
+#: includes/admin.php:109
+msgid "Order categories by"
+msgstr ""
+
+#: includes/admin.php:113
+msgid "Posts"
+msgstr ""
+
+#: includes/admin.php:115
+msgid "Number of posts"
+msgstr ""
+
+#: includes/admin.php:117
+msgid "Headline length"
+msgstr ""
+
+#: includes/admin.php:119
+msgid "Hide sticky posts"
+msgstr ""
+
+#: includes/admin.php:121
+msgid "Show excerpt"
+msgstr ""
+
+#: includes/admin.php:123
+msgid "Show thumbnail"
+msgstr ""
+
+#: includes/admin.php:125
+msgid "Thumbnail size"
+msgstr ""
+
+#: includes/admin.php:127
+msgid "Show only posts with thumbnails"
+msgstr ""
+
+#: includes/admin.php:129
+msgid "Order post by"
+msgstr ""
+
+#: includes/admin.php:133
+msgid "Styling"
+msgstr ""
+
+#: includes/admin.php:135
+msgid "Category font color"
+msgstr ""
+
+#: includes/admin.php:137
+msgid "Headline font color"
+msgstr ""
+
+#: includes/admin.php:139
+msgid "Headline font size"
+msgstr ""
+
+#: includes/admin.php:141
+msgid "Font family"
+msgstr ""
+
+#: includes/admin.php:143
+msgid "Excerpt font color"
+msgstr ""
+
+#: includes/admin.php:145
+msgid "Excerpt font size"
+msgstr ""
+
+#: includes/admin.php:147
+msgid "Thumbnail border"
+msgstr ""
+
+#: includes/admin.php:149
+msgid "List style"
+msgstr ""
+
+#: includes/admin.php:156 includes/admin.php:178
+msgid "Column Posts Options"
+msgstr ""
+
+#. #-#-#-#-#  plugin.pot (Column Posts 1.2.4)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: includes/admin.php:156 includes/widget.php:24
+msgid "Column Posts"
+msgstr ""
+
+#: includes/admin.php:187
+msgid "Save Changes"
+msgstr ""
+
+#: includes/admin.php:198
+msgid ""
+"To display the posts in columns, use the following code in your template "
+"files: <code>&lt;?php do_action('columnpost'); ?&gt;</code>.<br/>You can use "
+"the shortcode <b>[columnpost]</b> if you want to display the output of this "
+"plugin in your page or post content.<br/>Also, the column posts can be "
+"displayed in the sidebar by using the Column Posts widget."
+msgstr ""
+
+#: includes/admin.php:203
+msgid "The posts are grouped by categories or posts, and displayed in columns."
+msgstr ""
+
+#: includes/admin.php:209
+msgid "Category"
+msgstr ""
+
+#: includes/admin.php:210
+msgid "Post"
+msgstr ""
+
+#: includes/admin.php:216
+msgid "One"
+msgstr ""
+
+#: includes/admin.php:217
+msgid "Two"
+msgstr ""
+
+#: includes/admin.php:218
+msgid "Three"
+msgstr ""
+
+#: includes/admin.php:223
+msgid ""
+"This section allow you to redefine the category title, include or exclude "
+"categories and change their ordering."
+msgstr ""
+
+#: includes/admin.php:229
+msgid "%%title%% is the category name"
+msgstr ""
+
+#: includes/admin.php:236 includes/admin.php:243
+msgid "comma separated category ID's"
+msgstr ""
+
+#: includes/admin.php:249
+msgid "Category ID"
+msgstr ""
+
+#: includes/admin.php:250
+msgid "Category Name"
+msgstr ""
+
+#: includes/admin.php:251
+msgid "Custom, as listed in <em>%s</em>"
+msgstr ""
+
+#: includes/admin.php:256
+msgid ""
+"This section allow you to specify the number of posts to show, adjust the "
+"lenght of the title, hide sticky posts, show excerpts and thumbnails."
+msgstr ""
+
+#: includes/admin.php:268
+msgid "leave blank for full post title length, optimal 34 characters"
+msgstr ""
+
+#: includes/admin.php:293
+msgid "enter size in px for thumbnail width (height proportionally to width)"
+msgstr ""
+
+#: includes/admin.php:305
+msgid "Post Date"
+msgstr ""
+
+#: includes/admin.php:306
+msgid "Post Title"
+msgstr ""
+
+#: includes/admin.php:311
+msgid ""
+"You can change the styling of the column posts such as font family, font "
+"color. font size, etc ."
+msgstr ""
+
+#: includes/admin.php:317 includes/admin.php:324
+msgid "(<em>blank assumes the theme color</em>)"
+msgstr ""
+
+#: includes/admin.php:330 includes/admin.php:349
+msgid "px"
+msgstr ""
+
+#: includes/admin.php:336
+msgid "Example: verdana, arial, sans-serif. Blank assumes the theme."
+msgstr ""
+
+#: includes/admin.php:343
+msgid "(<em>blank assumes the theme color<em>)"
+msgstr ""
+
+#: includes/widget.php:23
+msgid "Display category or posts in columns"
+msgstr ""
+
+#: includes/widget.php:39
+msgid "To set up options, please go to the <a href=\"%s\">settings</a>"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://boroniatechnologies.com/column-posts/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Display the posts in columns organized by posts or categories."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Catherine Lebastard"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://boroniatechnologies.com"
+msgstr ""

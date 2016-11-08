@@ -1,0 +1,74 @@
+/*
+CSS Stylesheet for Column Category Posts
+Plugin URI: http://www.boroniatechonologies.com/wordpress/column-category-posts/
+Description: Group posts of a selected category in columns.
+Author: Catherine Lebastard
+Version: 1.0
+Author URI: http://www.boroniatechnologies.com
+*/
+#cp-box h3 {
+	margin: 0 0 10px 0;
+	padding: 0;
+	font: 16px;
+}
+
+#cp-box {
+	width: 100%;
+	clear: both;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+#cp-box .clear {
+	position: relative;
+	clear: both;
+	width: 100%;
+}
+
+/* columns */
+#cp-box .cp-box {
+	position: relative;
+	float: left;
+	padding: 0;
+	margin: 0 0 7px 0;
+}
+#cp-box .one {
+	width: 100%;
+	clear: both;
+}
+#cp-box .two {
+	width: 48%;
+	margin-right: 2%;
+}
+#cp-box .three {
+	width: 31%;
+	margin-right: 2%;
+}
+
+/* list style */
+#cp-box .cp-box ul {
+	margin-left: 15px;
+	padding: 0;
+}
+
+#cp-box .cp-box ul li{
+	font-size: 12px;
+}
+
+#cp-box .cp-box ul li a{
+	font-weight: bold;
+}
+
+#cp-box .cp-box ul li p{
+	font-size: 12px;
+	margin-bottom: 0px;
+}
+
+/* thumbnail */
+#cp-box img.alignthumb{
+	display: inline;
+	float: left;
+	margin-right: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
