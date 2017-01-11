@@ -1,6 +1,6 @@
 <div class="row">
     <div class="medium-12 columns fondo_azul">
-        <div class="medium-6 columns">
+        <div class="medium-6 columns padding10px">
             <h6 class="letra_blanca">Usted es <?php echo $_SESSION['perfil']?></h6>
         </div>
     </div>

@@ -8,7 +8,7 @@
 include "clases/conectaDB.php";
 require_once "tipos.php";
 if(!isset($_REQUEST['submit'])){
-    header("Location: formulario.php");
+    header("Location: formularioAlumnos.php");
 }else {
 
 //patrones de validación
@@ -114,8 +114,7 @@ if(!isset($_REQUEST['submit'])){
     $formularioOK = false;
 
     //Realizar comprobación para la inserción en la BD
-    if(validarInput($nombre,$patronPalabras)
-        and validarInput($dni,$patronDni)
+    if(validarInput($dni,$patronDni)
         and validarInput($email,$patronEmail)
         and validarInput($nacionalidad,$patronPalabras)
         and validarInput($cp,$patronNumero)
@@ -133,7 +132,7 @@ if(!isset($_REQUEST['submit'])){
         $db=new Conexion();
         $mensaje="";
         //comprobamos si el usuario ya ha enviado el formulario y está en la BD registrado
-        $consultaDni="SELECT id FROM participantes where dni=:dni";
+        $consultaDni="SELECT id FROM participantes where dni=:dni and tipo='estudiante'";
         $parametrosDni=array("dni"=>$dni);
         $resultDni=$db->consulta($consultaDni,$parametrosDni);
             //si existe el dni, haremos un update de los datos del participante
@@ -142,7 +141,7 @@ if(!isset($_REQUEST['submit'])){
             $consultaUpdate="UPDATE participantes SET nombre=:nombre, dni=:dni, fechaNac=:fechaNac,email=:email,nacionalidad=:nacionalidad,
                             direccion=:direccion, poblacion=:poblacion, codigoPostal=:codigoPostal, telefono=:telefono, telefono2=:telefono2,
                             experienciaLaboral=:experienciaLaboral, otrosEstudios=:otrosEstudios, idCiclo=:idCiclo, idConvocatoria=:idConvocatoria,
-                            idTutor=:idTutor WHERE id=:id";
+                            idTutor=:idTutor, validado=0, tipo='estudiante' WHERE id=:id";
             $parametrosUpdate=array("nombre"=>$nombre,"dni"=>$dni,"fechaNac"=>$fechaNac,"email"=>$email,"nacionalidad"=>$nacionalidad,
                 "direccion"=>$direccion,"poblacion"=>$poblacion,"codigoPostal"=>$cp,"telefono"=>$telefono,
                 "telefono2"=>$otroTelefono,"experienciaLaboral"=>$experiencia,"otrosEstudios"=>$otrosEstudios,
@@ -154,9 +153,9 @@ if(!isset($_REQUEST['submit'])){
             //si no existe el dni porque nunca ha enviado sus datos, insertamos en la BD sobre participantes
             $consulta="insert into participantes(nombre, dni,fechaNac,email,nacionalidad,direccion,
                     poblacion,codigoPostal,telefono,telefono2, experienciaLaboral, otrosEstudios,
-                    idCiclo,idConvocatoria,idTutor) values(:nombre,:dni,:fechaNac,:email,:nacionalidad,:direccion,
+                    idCiclo,idConvocatoria,idTutor,validado, tipo) values(:nombre,:dni,:fechaNac,:email,:nacionalidad,:direccion,
                     :poblacion,:codigoPostal,:telefono,:telefono2,:experienciaLaboral,:otrosEstudios,:idCiclo,
-                    :idConvocatoria,:idTutor)";
+                    :idConvocatoria,:idTutor,0,'estudiante')";
             $parametrosInsert=array("nombre"=>$nombre,"dni"=>$dni,"fechaNac"=>$fechaNac,"email"=>$email,"nacionalidad"=>$nacionalidad,
                 "direccion"=>$direccion,"poblacion"=>$poblacion,"codigoPostal"=>$cp,"telefono"=>$telefono,
                 "telefono2"=>$otroTelefono,"experienciaLaboral"=>$experiencia,"otrosEstudios"=>$otrosEstudios,
@@ -176,7 +175,7 @@ if(!isset($_REQUEST['submit'])){
     }
 //si el formulario no está OK volvemos al form con un mensaje de error
     else{
-        header("Location: formulario.php?mensaje=error");
+        header("Location: formularioAlumnos.php?mensaje=error");
     }
 }
 

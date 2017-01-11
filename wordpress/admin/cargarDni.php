@@ -9,11 +9,10 @@ include "clases/conectaDB.php";
 $db = new Conexion();
 //parámetro enviado por ajax
 $dni=$_REQUEST['dni_enviado'];
-//$dni='30834955M';
 $parametros=array("dni"=>$dni);
 $data=[];
 $data['errorDni']=false;
-$consultaParticipantes="SELECT nombre, email, direccion, codigoPostal, telefono, nacionalidad, poblacion, idTutor, idConvocatoria, idCiclo from participantes where dni=:dni";
+$consultaParticipantes="SELECT validado, nombre, email, direccion, codigoPostal, fechaNac, telefono, telefono2, nacionalidad, poblacion, idTutor, idConvocatoria, idCiclo from participantes where dni=:dni and tipo='estudiante'";
 $consultaEstudiantes="SELECT nombre, email, direccion, codigoPostal, telefono, nacionalidad from estudiantes where dni=:dni";
 
 $result=$db->consulta($consultaParticipantes,$parametros);
@@ -31,6 +30,9 @@ if($result){
         foreach($result as $key){
             $data['pais'.$key['prioridad']]=$key['idPais'];
         }
+    }
+    if($data['validado']==1){
+        $data['errorDni']=true;
     }
     //si no existe en participantes lo busco en la tabla estudiantes
 }else{

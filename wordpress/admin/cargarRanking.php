@@ -9,13 +9,13 @@ include "clases/funcionesAdmin.php";
 $db = new Conexion();
 $idConvocatoria=$_REQUEST['convocatoria_enviada'];
 $consulta="SELECT (notas.expAcademic+ notas.compLing+notas.cartaMotiv+ notas.informe) as nota, participantes.*
-          from notas, participantes where participantes.id = notas.idParticipante and idConvocatoria=:idConvocatoria
+          from notas, participantes where participantes.id = notas.idParticipante and idConvocatoria=:idConvocatoria and puntuado=1
           order by nota desc";
 $parametros=array("idConvocatoria"=>$idConvocatoria);
 $result=$db->consulta($consulta,$parametros);
 if($result){
     echo '<div class="table-scroll">';
-    echo '<table class="hover">';
+    echo '<table class="hover centrar">';
     echo '<tr><th></th><th>Nombre</th><th>Dni</th><th>Ciclo</th><th>Nota Final</th></tr>';
     $orden=1;
     foreach($result as $key){

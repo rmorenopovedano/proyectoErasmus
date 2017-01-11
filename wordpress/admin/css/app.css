@@ -28,6 +28,9 @@ textarea{
 .fondo_footer{
     background: #1F2021;
 }
+.fondo_info{
+    background: #87ACB6;
+}
 .letra_azul{
     color: #004397;
 }
@@ -48,18 +51,23 @@ textarea{
     color: #004397;
     border-top: 2px solid #004397;
 }
+.letra_ies{
+    font-family: "Gill Sans", "Gill Sans MT", Helvetica, Arial, sans-serif;
+}
 body{
     background: #F2F2F2;
 }
-#formulario_oculto{
+#formulario_oculto, #formulario_oculto2{
     display:none;
 }
-#aviso{
+
+#aviso,#aviso2{
     display: none;
     background: #FFE7A7;
     border: 1px solid orange;
     text-align: center;
 }
+
 .exito{
     color:#004397;
     border: 2px solid #dddddd;
@@ -99,4 +107,15 @@ div.table-scroll table {
 .baremacion{
     color: orangered;
     font-size: 0.8em;
+}
+.idiomas{
+    font-size: 0.9em;
+    color: #111;
+}
+.nota{
+    border: 1px solid white;
+    background: #eee;
+}
+.subtitulo{
+    background: #D9D8FF;
 }

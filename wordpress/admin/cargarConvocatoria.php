@@ -8,23 +8,23 @@
 include "clases/funcionesAdmin.php";
 $db = new Conexion();
 $idConvocatoria=$_REQUEST['convocatoria_enviada'];
-$consulta="select * from participantes where idConvocatoria=:idConvocatoria";
+$consulta="select * from participantes where idConvocatoria=:idConvocatoria and tipo='estudiante'";
 $parametros=array("idConvocatoria"=>$idConvocatoria);
 $result=$db->consulta($consulta,$parametros);
 if($result){
     echo '<div class="table-scroll">';
         echo '<table class="hover">';
-        echo '<tr><th>Nombre</th><th>Dni</th><th>Ciclo</th><th>Email</th><th>Teléfono</th><th>Baremar</th></tr>';
+        echo '<tr><th>Nombre</th><th>Dni</th><th>Ciclo</th><th>Email</th><th>Teléfono</th><th>Baremar</th><th>Editar Nota</th></tr>';
         foreach($result as $key){
             $consultaCiclo="select nombre from ciclos where id in(select idCiclo from participantes where idCiclo=:idCiclo)";
             $parametros=array("idCiclo"=>$key['idCiclo']);
             $ciclo=$db->consulta($consultaCiclo, $parametros);
-            echo '<tr><td>'.$key['nombre'].'</td><td>'.$key['dni'].'</td><td>'.$ciclo[0]['nombre'].'</td><td>'.$key['email'].'</td><td>'.$key['telefono'].'</td><td class="centrar">';
+            echo '<tr><td class="centrar">'.$key['nombre'].'</td><td class="centrar">'.$key['dni'].'</td><td class="centrar">'.$ciclo[0]['nombre'].'</td><td class="centrar">'.$key['email'].'</td><td class="centrar">'.$key['telefono'].'</td><td class="centrar">';
             //comprobar si el usuario está ya puntuado o no para quitar el enlace a baremar.
-            if(comprobarExisteAlumno($key['id'])) {
-                echo "<img src='img/puntuado.png'>";
+            if(comprobarExiste($key['id'])) {
+                echo '<img src="img/puntuado.png"></td><td class="centrar"><a href="baremar.php?idAlumno='.$key['id'].'&action=edit"><img src="img/editar.png"></a></td></tr>';
             }else
-                echo '<a href="baremar.php?idAlumno='.$key['id'].'"><img src="img/edit.png"></a></td></tr>';
+                echo '<a href="baremar.php?idAlumno='.$key['id'].'&action=new"><img src="img/edit.png"></a></td><td></td></tr>';
         }
         echo '</table>';
     echo '</div>';

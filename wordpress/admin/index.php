@@ -10,4 +10,5 @@ include "cabeceraAdmin.php";
 if($_SESSION['perfil']!='administrador' and $_SESSION['perfil']!='colaborador')
     header("Location: login.php");
 include "cajaazul.php";
+include "info.php";
 include "footer.php";

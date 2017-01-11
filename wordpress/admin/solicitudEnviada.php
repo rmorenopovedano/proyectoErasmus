@@ -12,5 +12,10 @@ include "cabecera.php";
             <span class="exito" >Su solicitud se ha <?php echo $_REQUEST['mensaje']?> con éxito</span>
         </div>
     </div>
+    <script>
+        setTimeout(function(){
+            window.location="../";
+        }, 2000);
+    </script>
 <?php
 include "footer.php";

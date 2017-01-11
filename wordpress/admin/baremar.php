@@ -16,46 +16,61 @@ include "cabeceraAdmin.php";
 include "cajaazul.php";
 $idAlumno=$_REQUEST['idAlumno'];
 $nombreAlumno=cargarNombreAlumno($idAlumno);
-?>
+$notasAlumno=cargarNotasAlumno($idAlumno);
+$documentosAlumno=cargarDocumentos($idAlumno);
+echo '<div class="row subtitulo">
+        <div class="medium-12 medium-centered columns centrar">
+            <h3>Puntuar Alumno</h3>
+        </div>
+    </div>';
+echo'
 <div class="row">
     <div class="medium-7 medium-centered columns">
-        <!--Mostrar el error mediante php si el formulario no ha sido validado-->
-        <?php
+        <!--Mostrar el error mediante php si el formulario no ha sido validado-->';
+
         if(isset($_GET['mensaje'])){
             if($_GET['mensaje']=="error"){
                 echo '<div data-abide-error class="alert callout">
-                          <p><i class="fi-alert"></i> Tu formulario contiene errores y no se ha podido enviar.</p>
+                          <p><i class="fi-alert"></i>Formulario no válido. Debe utilizar el (.) como separador decimal y solo valores númericos.</p>
                       </div>';
             }
         }
-        ?>
-        <form data-abide novalidate method="post" action="gestionarBaremacion.php">
+        $action="?action=new";
+        if(isset($_REQUEST['action'])) {
+            if ($_REQUEST['action'] == "edit") {
+                $action="?action=edit";
+                $expediente=$notasAlumno[0]['expAcademic'];
+                $competencia=$notasAlumno[0]['compLing'];
+                $carta=$notasAlumno[0]['cartaMotiv'];
+                $informe=$notasAlumno[0]['informe'];
+
+            }else{
+                $action="?action=new";
+                $expediente="";
+                $competencia="";
+                $carta="";
+                $informe="";
+            }
+        }
+        echo'
+        <form data-abide novalidate method="post" action="gestionarBaremacion.php'.$action.'">
             <fieldset>
-                <legend><?php echo cargarNombreAlumno($idAlumno)?></legend>
+                <legend>'.$nombreAlumno.'</legend>
+                <div class="row padding40px">
+                    <div class="medium-10 medium-centered columns">
+                    <label class="centrar padding10px">Documentos</label>';
+
+                    foreach($documentosAlumno as $documento){
+                     echo'<a target="_blank" class="boton centrar" href="uploads/'.$documento['nombre'].'">'.$documento['tipo'].'</a>';
+                    }
+                 echo'</div>
+                </div>
                 <div class="row">
                     <div class="medium-6 medium-text-right columns">
                         <label>Expediente Académico:</label>
                     </div>
                     <div class="medium-2 columns">
-                        <select name="expediente" id="expediente">
-                            <option value="0">0</option>
-                            <option value="0.25">0.25</option>
-                            <option value="0.5">0.5</option>
-                            <option value="0.75">0.75</option>
-                            <option value="1">1</option>
-                            <option value="1.25">1.25</option>
-                            <option value="1.5">1.5</option>
-                            <option value="1.75">1.75</option>
-                            <option value="2">2</option>
-                            <option value="2.25">2.25</option>
-                            <option value="2.5">2.5</option>
-                            <option value="2.75">2.75</option>
-                            <option value="3">3</option>
-                            <option value="3.25">3.25</option>
-                            <option value="3.5">3.5</option>
-                            <option value="3.75">3.75</option>
-                            <option value="4">4</option>
-                        </select>
+                        <input type="text" name="expediente" required pattern="expediente" id="expediente" value="'.$expediente.'">
                     </div>
                     <div class="medium-4 columns">
                         <span class="baremacion">(Puntúa de 0 a 4)</span>
@@ -66,25 +81,7 @@ $nombreAlumno=cargarNombreAlumno($idAlumno);
                         <label>Competencia lingüística:</label>
                     </div>
                     <div class="medium-2 columns">
-                        <select name="competencia" id="competencia">
-                            <option value="0">0</option>
-                            <option value="0.25">0.25</option>
-                            <option value="0.5">0.5</option>
-                            <option value="0.75">0.75</option>
-                            <option value="1">1</option>
-                            <option value="1.25">1.25</option>
-                            <option value="1.5">1.5</option>
-                            <option value="1.75">1.75</option>
-                            <option value="2">2</option>
-                            <option value="2.25">2.25</option>
-                            <option value="2.5">2.5</option>
-                            <option value="2.75">2.75</option>
-                            <option value="3">3</option>
-                            <option value="3.25">3.25</option>
-                            <option value="3.5">3.5</option>
-                            <option value="3.75">3.75</option>
-                            <option value="4">4</option>
-                        </select>
+                        <input type="text" name="competencia" id="competencia" required pattern="expediente" value="'.$competencia.'">
                     </div>
                     <div class="medium-4 columns">
                         <span class="baremacion">(Puntúa de 0 a 4)</span>
@@ -95,13 +92,7 @@ $nombreAlumno=cargarNombreAlumno($idAlumno);
                         <label>Carta de motivación:</label>
                     </div>
                     <div class="medium-2 columns">
-                        <select name="carta" id="carta">
-                            <option value="0">0</option>
-                            <option value="0.25">0.25</option>
-                            <option value="0.5">0.5</option>
-                            <option value="0.75">0.75</option>
-                            <option value="1">1</option>
-                        </select>
+                        <input type="text" name="carta" id="carta" required pattern="carta" value="'.$carta.'">
                     </div>
                     <div class="medium-4 columns">
                         <span class="baremacion">(Puntúa de 0 a 1)</span>
@@ -112,13 +103,7 @@ $nombreAlumno=cargarNombreAlumno($idAlumno);
                         <label>Informe del tutor:</label>
                     </div>
                     <div class="medium-2 columns">
-                        <select name="informe" id="informe">
-                            <option value="0">0</option>
-                            <option value="0.25">0.25</option>
-                            <option value="0.5">0.5</option>
-                            <option value="0.75">0.75</option>
-                            <option value="1">1</option>
-                        </select>
+                        <input type="text" id="informe" name="informe" required pattern="carta" value="'.$informe.'">
                     </div>
                     <div class="medium-4 columns">
                         <span class="baremacion">(Puntúa de 0 a 1)</span>
@@ -126,13 +111,12 @@ $nombreAlumno=cargarNombreAlumno($idAlumno);
                 </div>
                 <div class="row">
                     <div class="medium-6 medium-centered columns centrar">
-                        <input type="hidden" name="idAlumno" id="idAlumno" value="<?php echo $idAlumno?>">
+                        <input type="hidden" name="idAlumno" id="idAlumno" value="'.$idAlumno.'">
                         <input class="button" type="submit" id="submit" name="submit" value="Puntuar">
                     </div>
                 </div>
             </fieldset>
         </form>
     </div>
-</div>
-<?php
+</div>';
 include "footer.php";

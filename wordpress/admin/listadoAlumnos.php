@@ -13,6 +13,11 @@ if($_SESSION['perfil']!='administrador' and $_SESSION['perfil']!='colaborador')
 include "cajaazul.php";
 $convocatorias=cargarConvocatoriasParaAdmin();
 ?>
+    <div class="row subtitulo" id="tituloListado">
+        <div class="medium-12 medium-centered columns centrar">
+            <h3>Alumnos a baremar</h3>
+        </div>
+    </div>
 <div class="row">
     <div class="medium-4 medium-centered columns">
         <label>Selecciona convocatoria:

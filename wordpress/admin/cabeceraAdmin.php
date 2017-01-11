@@ -25,11 +25,36 @@
                 </div>
                 <div class="medium-6 columns margintop30px">
                     <ul class="menu dropdown" data-dropdown-menu>
-                        <li><a href="../" class="letra_gris">Erasmus+</a></li>
-                        <li><a href="#" class="letra_gris">Solicitudes</a>
+                        <li><a class="letra_gris">Solicitudes</a>
                             <ul class="menu">
-                                <li><a href="listadoAlumnos.php">Baremar</a></li>
-                                <li><a href="ranking.php">Ranking</a></li>
+                                <li><a>Estudiantes</a>
+                                    <ul class="menu">
+                                        <li><a href="listadoAlumnos.php">Baremar</a></li>
+                                        <li><a href="rankingAlumnos.php">Ranking</a></li>
+                                        <li><a href="validarAlumno.php">Validar</a></li>
+                                        <li><a href="eliminarAlumno.php">Eliminar</a></li>
+                                    </ul>
+                                </li>
+                                <li><a>Profesores</a>
+                                    <ul class="menu">
+                                        <li><a href="listadoProfesores.php">Baremar</a></li>
+                                        <li><a href="rankingProfesores.php">Ranking</a></li>
+                                        <li><a href="validarProfesor.php">Validar</a></li>
+                                        <li><a href="eliminarProfesor.php">Eliminar</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="">Documentos internos</a></li>
+                        <li><a href="">Resumen de movilidades</a>
+                            <ul class="menu">
+                                <li><a href="">2014</a></li>
+                                <li><a href="">2015</a></li>
+                                <li><a href="">2016</a></li>
+                                <li><a href="">2017</a></li>
+                                <li><a href="">2018</a></li>
+                                <li><a href="">2019</a></li>
+                                <li><a href="">2020</a></li>
                             </ul>
                         </li>
                         <li><a href="salir.php" class="button">Salir</a></li>

@@ -45,3 +45,12 @@ function cargarConvocatorias(){
         return $result;
     }
 }
+//funcion para cargar los idiomas
+function cargarIdiomas(){
+    $db=new Conexion();
+    $consulta="select idioma,id from idiomas";
+    $result=$db->consulta($consulta);
+    if($result){
+        return $result;
+    }
+}
